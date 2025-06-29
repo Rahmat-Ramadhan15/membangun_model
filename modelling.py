@@ -1,6 +1,5 @@
 import mlflow
 import mlflow.sklearn
-import dagshub
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -10,10 +9,10 @@ from sklearn.metrics import accuracy_score
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
 # Inisialisasi ke DagsHub
-dagshub.init(repo_owner="Rahmat-Ramadhan15", repo_name="membangun_model", mlflow=True)
+# dagshub.init(repo_owner="Rahmat-Ramadhan15", repo_name="membangun_model", mlflow=True)
 
 # Set nama eksperimen
-mlflow.set_experiment("Telco Customer Churn")
+mlflow.set_experiment("Telco-Customer-Churn")
 
 # Aktifkan autologging
 mlflow.sklearn.autolog()
